@@ -1,2 +1,4 @@
-FROM strimzi/kafka:latest-kafka-2.4.0
+ARG kafka_version
+
+FROM strimzi/kafka:latest-kafka-$kafka_version
 COPY ./plugins/* /opt/kafka/plugins/
